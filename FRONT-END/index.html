@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpha Studio - Lava Jato Premium</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Overlay para efeitos -->
+    <div class="blur-overlay" id="blurOverlay"></div>
+
+    <!-- Navegação -->
+    <nav class="nav">
+      <div class="logo"><span>ALPHA</span>STUDIO</div>
+      <ul class="nav-list">
+        <li><a href="#servicos">SERVIÇOS</a></li>
+        <li><a href="#" id="btnAgendamento">AGENDAMENTO</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
+      <div class="menu-mobile" id="menuMobile">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <section class="hero" id="mainContent">
+      <div class="hero-content">
+        <h1 class="title">ALPHA STUDIO</h1>
+        <h2 class="subtitle">Lava Jato Premium</h2>
+        <p class="tagline">Excelência automotiva em cada detalhe</p>
+        <div class="cta-buttons">
+          <a href="#" class="cta-button" id="btnHeroAgendamento"
+            >AGENDE AGORA</a
+          >
+          <a href="#servicos" class="cta-button secondary">NOSSOS SERVIÇOS</a>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <span>Role para ver mais</span>
+        <div class="arrow"></div>
+      </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section class="servicos" id="servicos">
+      <div class="section-header">
+        <h2>Nossos Serviços</h2>
+        <p>Conheça nossos pacotes exclusivos</p>
+      </div>
+
+      <div class="price-table">
+        <h3>Tabela de Preços</h3>
+        <table>
+          <thead>
+          <tr>
+            <th>Tipo/Tamanho</th>
+            <th>Hatch</th>
+            <th>Sedan</th>
+            <th>SUV</th>
+            <th>Pick-up</th>
+          </tr>
+          </thead>
+          <tbody id="precos-tabela">
+          <tr>
+            <td>Básica</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+          </tr>
+          <tr>
+            <td>Intermediária</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+            <td>R$ --</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <!-- Formulário de Agendamento -->
+    <div class="form-container" id="agendamentoForm">
+      <button class="close-btn" id="closeAgendamento">&times;</button>
+      <h2>Agendamento</h2>
+      <form id="formAgendamento">
+        <div class="form-section">
+          <h3>Dados do Cliente</h3>
+          <div class="form-group">
+            <label for="nomeCliente">Nome Completo</label>
+            <input type="text" name="nome" id="nomeCliente" required />
+          </div>
+          <div class="form-group">
+            <label for="telefoneCliente">Telefone</label>
+            <input
+              type="tel"
+              name="telefone"
+              id="telefoneCliente"
+              required
+              placeholder="(00) 00000-0000"
+            />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Dados do Veículo</h3>
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <select name="marca" id="marca" required>
+              <option value="">Selecione a marca</option>
+              <option value="chevrolet">Chevrolet</option>
+              <option value="fiat">Fiat</option>
+              <option value="ford">Ford</option>
+              <option value="honda">Honda</option>
+              <option value="hyundai">Hyundai</option>
+              <option value="toyota">Toyota</option>
+              <option value="volkswagen">Volkswagen</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <input type="text" name="modelo" id="modelo" required />
+          </div>
+          <div class="form-group">
+            <label for="cor">Cor</label>
+            <input type="text" name="cor" id="cor" required />
+          </div>
+          <div class="form-group">
+            <label for="tipoVeiculo">Tipo do veículo</label>
+            <select name="tipo" id="tipoVeiculo" required>
+              <option value="">Selecione o tipo</option>
+              <option value="hatch">Hatch</option>
+              <option value="sedan">Sedan</option>
+              <option value="suv">SUV</option>
+              <option value="pickup">Pick-up</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Tipo de Lavagem</h3>
+          <div class="form-group">
+            <label for="servico">Serviço</label>
+            <select name="servico" id="servico" required>
+              <option value="">Selecione o serviço</option>
+              <option value="basica">
+                Básica (Lavagem externa + aspiração)
+              </option>
+              <option value="intermediaria">
+                Intermediária (Básica + cera + limpeza de rodas)
+              </option>
+              <option value="premium">
+                Premium (Intermediária + higienização + tratamento de plásticos)
+              </option>
+            </select>
+          </div>
+          <div class="price-display" id="valorServico">Valor: R$ 0,00</div>
+        </div>
+
+        <div class="form-section">
+          <h3>Data e Hora</h3>
+          <div class="form-group">
+            <label for="dataAgendamento">Data</label>
+            <input type="date" name="data" id="dataAgendamento" required />
+          </div>
+          <div class="form-group">
+            <label for="horaAgendamento">Horário</label>
+            <select name="hora" id="horaAgendamento" required>
+              <option value="">Selecione o horário</option>
+              <option value="08:00">08:00</option>
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">CONFIRMAR AGENDAMENTO</button>
+      </form>
+
+      <!-- Confirmação de Agendamento -->
+      <div id="confirmacaoContainer" style="display: none;">
+        <h2>Agendamento confirmado!</h2>
+        <p>Seu horário foi reservado com sucesso.</p>
+
+        <button id="fecharConfirmacao" class="submit-btn">OK</button>
+
+        <a
+                id="btnEnviarWhatsapp"
+                class="submit-btn"
+                style="margin-top: 10px; display: none; text-align: center;"
+                target="_blank"
+        >
+          Enviar no WhatsApp
+        </a>
+      </div>
+
+    </div>
+    </div>
+
+    <!-- Seção Contato -->
+    <section class="contato" id="contato">
+      <div class="section-header">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco</p>
+      </div>
+      <div class="contato-content">
+        <div class="contato-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Av. Premium, 1000 - Centro<br/>São Paulo/SP</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <p>(11) 4002-8922</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>contato@alphastudio.com.br</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <p>Segunda a Sábado<br/>08:00 às 18:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo"><span>ALPHA</span>STUDIO</div>
+        <div class="footer-links">
+          <a href="#servicos">Serviços</a>
+          <a href="#" id="btnFooterAgendamento">Agendamento</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Alpha Studio. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Área Admin -->
+    <div class="admin-login-overlay" id="adminLoginOverlay">
+      <div class="admin-login-box">
+        <h2>Acesso Restrito</h2>
+        <form id="adminLoginForm">
+          <div class="form-group">
+          <label for="adminEmail">E-mail:</label>
+            <input type="email" id="adminEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="adminSenha">Senha:</label>
+            <input type="password" id="adminSenha" required />
+          </div>
+          <button type="submit" class="submit-btn">Acessar Painel</button>
+          <p id="loginError" class="error-message"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="adminPanel">
+      <div class="admin-header">
+        <h2>Painel Administrativo</h2>
+        <button id="adminLogoutBtn" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Sair
+        </button>
+      </div>
+
+      <div class="admin-filters">
+        <div class="form-group">
+          <label for="filterDate">Filtrar por data:</label>
+          <input type="date" id="filterDate" />
+        </div>
+        <button id="refreshBtn" class="cta-button">
+          <i class="fas fa-sync-alt"></i> Atualizar
+        </button>
+      </div>
+
+      <div class="agendamentos-container">
+        <div class="agendamentos-header">
+          <span>Data</span>
+          <span>Hora</span>
+          <span>Cliente</span>
+          <span>Veículo</span>
+          <span>Serviço</span>
+          <span>Valor</span>
+        </div>
+        <div class="agendamentos-list" id="agendamentosList">
+          <!-- Agendamentos serão carregados aqui -->
+        </div>
+      </div>
+      <div class="admin-precos">
+        <h3>Gerenciar Preços</h3>
+        <table>
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tipo Veículo</th>
+            <th>Serviço</th>
+            <th>Valor (R$)</th>
+            <th>Ações</th>
+          </tr>
+          </thead>
+          <tbody id="tabelaPrecos">
+          <!-- Vai carregar os preços dinamicamente -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
