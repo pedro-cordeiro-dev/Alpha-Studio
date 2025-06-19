@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const valorFormatado = valor.toFixed(2).replace(".", ",");
 
                 const msg = `Olá, me chamo ${nome} e acabei de agendar um serviço no Alpha Studio:\n\n🚗 *Veículo*: ${marca} ${modelo} (${tipoNome} - ${cor})\n🛠️ *Serviço*: ${servicoNome}\n📅 *Data*: ${formatarData(dataAg)} às ${horaAg}\n💰 *Valor*: R$ ${valorFormatado}\n📞 *Contato*: ${telefone}`;
-                const url = `https://wa.me/5585997725066?text=${encodeURIComponent(
+                const url = `https://wa.me/adicioneSeuNumeroAqui?text=${encodeURIComponent(
                     msg
                 )}`;
 
